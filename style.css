@@ -1,0 +1,43 @@
+/* Style global */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;  /* Fond noir */
+    color: white;  /* Texte blanc */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Centrer le contenu */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style du texte */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* Style du bouton */
+button {
+    padding: 15px 30px;
+    background-color: #ffffff;  /* Bouton blanc */
+    color: #000000;  /* Texte du bouton noir */
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #cccccc;  /* Effet hover sur le bouton */
+}
