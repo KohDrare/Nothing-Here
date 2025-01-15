@@ -12,32 +12,37 @@ body {
     text-align: center;
 }
 
-/* Centrer le contenu */
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Style du texte */
 h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    font-size: 48px;
 }
 
-/* Style du bouton */
 button {
+    font-size: 20px;
     padding: 15px 30px;
-    background-color: #ffffff;  /* Bouton blanc */
-    color: #000000;  /* Texte du bouton noir */
+    margin-top: 20px;
     border: none;
     border-radius: 5px;
-    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s;
+    background-color: #ffffff; /* Couleur du bouton */
+    color: rgb(0, 0, 0);
+    transition: all 0.3s ease; /* Transition pour animation */
 }
 
+/* Animation de brillance */
+@keyframes shine {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.7), 0 0 50px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+}
+
+/* Effet d'agrandissement et brillance au survol */
 button:hover {
-    background-color: #cccccc;  /* Effet hover sur le bouton */
+    transform: scale(1.2); /* Agrandir le bouton */
+    animation: shine 1s infinite alternate; /* Animation de brillance */
 }
