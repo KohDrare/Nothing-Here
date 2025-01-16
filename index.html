@@ -3,14 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Site</title>
+    <title>Nothing Here</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Nothing Here</h1>
-        <button onclick="alert('SBHi2TTAYiJucwXpf8PPiB7VKfLcEv2Qg41MKp9ozpump')">Just the CA</button>
+    <!-- Bouton pour passer en plein écran -->
+    <a id="fullscreenButton" onclick="goFullscreen()">Nothing Here</a>
+
+    <!-- Contenu principal visible après être passé en plein écran -->
+    <div id="mainContent">
+        <h1>Still Nothing Here</h1>
+        <button id="justTheCAButton" onclick="showCA()">Just the CA</button>
     </div>
+
+    <!-- Contenu du message "Just the CA" -->
+    <div id="caContent">
+        <h1>SBHi2TTAYiJucwXpf8PPiB7VKfLcEv2Qg41MKp9ozpump</h1>
+    </div>
+
+    <!-- Bouton pour quitter le plein écran -->
+    <a id="exitFullscreenButton" onclick="exitFullscreen()">Exit</a>
+
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,34 +1,32 @@
 /* Style global */
 body {
+    background-color: black;
+    color: white;
     font-family: Arial, sans-serif;
-    background-color: #000000;  /* Fond noir */
-    color: white;  /* Texte blanc */
     margin: 0;
-    padding: 0;
+    height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     text-align: center;
 }
 
-h1 {
-    font-size: 48px;
-}
-
-button {
+/* Style global pour les boutons */
+#fullscreenButton, #justTheCAButton {
     font-size: 20px;
-    padding: 15px 30px;
-    margin-top: 20px;
-    border: none;
+    color: white;
+    background-color: black;
+    border: 2px solid white;
     border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
     cursor: pointer;
-    background-color: #ffffff; /* Couleur du bouton */
-    color: rgb(0, 0, 0);
-    transition: all 0.3s ease; /* Transition pour animation */
+    transition: all 0.3s;
+    margin-top: 20px;
 }
 
-/* Animation de brillance */
+/* Animation de brillance pour les deux boutons */
 @keyframes shine {
     0% {
         box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
@@ -41,8 +39,45 @@ button {
     }
 }
 
-/* Effet d'agrandissement et brillance au survol */
-button:hover {
-    transform: scale(1.2); /* Agrandir le bouton */
+/* Effet de brillance au survol pour les deux boutons */
+#fullscreenButton:hover, #justTheCAButton:hover {
+    background-color: white;
+    color: black;
     animation: shine 1s infinite alternate; /* Animation de brillance */
+}
+
+/* Optionnel : mettre un effet d'agrandissement sur le bouton en survol */
+#fullscreenButton:hover, #justTheCAButton:hover {
+    transform: scale(1.2); /* Agrandir le bouton */
+}
+
+/* Caché par défaut, utilisé pour l'affichage dynamique */
+#mainContent, #caContent {
+    display: none; /* Caché au départ */
+}
+
+h1 {
+    margin: 20px 0;
+}
+
+#exitFullscreenButton {
+    font-size: 12px;
+    color: white;
+    background-color: black;
+    border: 0px solid white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-decoration: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px; /* En bas de la page */
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s;
+    display: none; /* Caché par défaut */
+}
+
+#exitFullscreenButton:hover {
+    background-color: white;
+    color: black;
 }
